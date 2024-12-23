@@ -1,0 +1,149 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.header__nav {
+    display: flex;
+    gap: 2rem;
+}
+.header__nav-item {
+    color: white;
+    font-weight: bold;
+}
+.header__nav-item:hover {
+    transform: scale(1.1)
+}
+.header__cart {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+}
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: calc(25% - 2rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.product:hover {
+    transform: scale(1.05);
+}
+.product__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+.product__image:hover {
+    transform: scale(1.1);
+}
+.product__name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.product__info {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+.product__price {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.product__button {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.product__button:hover {
+    background-color: #555;
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    text-align: center;
+}
+.about__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.about__content {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    padding: 1.5rem 2rem;
+    background-color: #333;
+    color: white;
+}
+.footer__info {
+    font-size: 0.9rem;
+}
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.footer__social-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 2rem);
+    }
+}
+@media (max-width: 480px) {
+    .product {
+        width: calc(100% - 2rem);
+    }
+}
